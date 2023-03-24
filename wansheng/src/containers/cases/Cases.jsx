@@ -2,7 +2,7 @@ import React from 'react'
 import './cases.css';
 import Article from '../../components/article/article';
 
-import { case1, case2, case3 ,case1After,case2After,case3After} from './imports';
+import { case1, case2, case3 ,case1After,case2After,case3After} from '../../assets/imports';
 const Cases = () => {
   return (
     <div className="ws_cases section__padding" id="cases">

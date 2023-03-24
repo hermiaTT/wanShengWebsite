@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
 import './navbar.css';
+import { Flex} from '@chakra-ui/react'
+import Button from '../field/Button';
 //BEN -> Block Element Modifier
 
 const Menu = ()=>(
@@ -14,10 +16,12 @@ const Menu = ()=>(
   </>
 )
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [toggleMenu, setToggleMenu] = useState(false);
+
+  
   return (
-    <div className='ws__navbar'>
+    <Flex className='ws__navbar'>
       <div className = 'ws__navbar-links'>
         <div className='ws__navbar-links_logo'>
           <img src={logo} alt="logo"/>
@@ -28,7 +32,7 @@ const Navbar = () => {
       </div>
       <div className='ws__navbar-sign'>
         <p>Sign in</p>
-        <button type='button'>Sign up</button>
+        <Button title={"Sign Up"} ></Button>
       </div>
       <div className='ws__navbar-menu'>
         {toggleMenu ? 
@@ -42,12 +46,12 @@ const Navbar = () => {
             </div>
             <div className='ws__navbar-menu_container-links-sign'>
               <p>Sign in</p>
-              <button type='button'>Sign up</button>
+              <Button title={"Sign Up"} ></Button>
             </div>
           </div>
         )}
       </div>
-    </div>
+    </Flex>
   )
 }
 

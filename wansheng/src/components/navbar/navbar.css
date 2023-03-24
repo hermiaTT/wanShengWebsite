@@ -1,9 +1,15 @@
 .ws__navbar {
-    display: flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
     align-items: center;
-
-    padding: 2rem 6rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5em, 1.5em, 1.5em, 15%;
+    background-color: rgba(255,255,255,.8);
+    color: black;
+    text-transform: uppercase;
 }
 
 .ws__navbar-links {
@@ -27,41 +33,26 @@
     flex-direction: row;
 
 }
-
 .ws__navbar-sign {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-.ws__navbar-links_container p,
-.ws__navbar-sign p,
-.ws__navbar-menu_container p {
-    color: #fff;
+  }
+  
+  .ws__navbar-links_container p,
+  .ws__navbar-sign p,
+  .ws__navbar-menu_container p {
+    color: rgb(0, 0, 0);
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
     text-transform: capitalize;
-
+  
     margin: 0 1rem;
     cursor: pointer;
-}
-
-.ws__navbar-sign button,
-.ws__navbar-menu_container button {
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background: #FF4820;
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
+  }
+  
 
 .ws__navbar-menu {
     margin-left: 1rem;
