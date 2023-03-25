@@ -3,17 +3,6 @@
     align-items: center;
 }
 
-
-.ws__team-heading {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.ws__team-heading-text{
-    font-size: 16px;
-    margin-bottom: 32px;
-    max-width: 460px;
-    text-align: center;
-}
 .ws__team-container {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 26px;
@@ -22,6 +11,8 @@
 }
 .ws__team-container-img{
     max-width: 100%;
+    width: 376px;
+    height: 420px;
 }
 .ws_team-card{
     position: absolute;
@@ -33,9 +24,12 @@
     width: 80%;
     background-color: white;
     border-color: #f39d00;
-    border-width: 6px;
+    border-width: 12px;
     border-style: solid;
 
+}
+.ws_team-card p{
+    margin: 4px;
 }
 .ws_team-bgImage {
     max-width: 660px;
@@ -49,6 +43,8 @@
 }
 .ws_team-service-container{
     background-color: #f39d00;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 .ws_team-service-flex{
     flex-direction: column;
@@ -67,8 +63,12 @@
     font-weight: bolder;
     margin-bottom: 8px;
     align-self: flex-start;
+    font-size: 34px;
+    font-family: 'Cormorant Garamond', serif;
+    
 }
 .ws_team-service-flex h4{
+    font-family: 'Cormorant Garamond', serif;
     font-size: large;
     font-weight: normal;
     margin-bottom: 20px;

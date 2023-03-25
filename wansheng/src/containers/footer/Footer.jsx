@@ -1,47 +1,76 @@
-import React from 'react';
-import wsLogo from '../../assets/logo.svg';
-import './footer.css';
+import React from 'react'
+import { Text, Flex, Grid, Box } from '@chakra-ui/react'
+// import Logo from './logo'
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGoogle,
+  FaInstagram,
+  FaYoutube
+} from 'react-icons/fa'
+import Logo from '../../components/Logo';
+
 
 const Footer = () => (
-  <div className="ws_footer section__padding">
-    <div className="ws_footer-heading">
-      <h1 className="gradient__text">温哥华室内设计与装修首选，为你打造温馨的家</h1>
-    </div>
 
-    {/* <div className="ws_footer-btn">
-      <p>Request Early Access</p>
-    </div> */}
+  <Grid as="footer" className='ws_footer'>
+    <Flex className='ws_footer-section'  pl={['8', '8', '8', '24', '24']}
+      gridColumn={['1 / 7', '1 / 7', '1 / 7', '1 / 3', '1 / 3']} >
+      <Logo/>
+      <Text fontSize="sm" mt="4" textAlign="left" lineHeight="22px">
+        Wansheng Construction since 2022
+      </Text>
+      <Flex flexDirection="row" justifyContent="space-between" alignItems="center" mt="8" >
+        <Box as={FaFacebookF} />
+        <Box as={FaTwitter}  />
+        <Box as={FaGoogle} />
+        <Box as={FaInstagram} />
+        <Box as={FaYoutube} />
+      </Flex>
+    </Flex>
 
-    <div className="ws_footer-links">
-      <div className="ws_footer-links_logo">
-        <img src={wsLogo} alt="gpt3_logo" />
-        <p>WanSheng Construction, <br /> All Rights Reserved</p>
-      </div>
-      <div className="ws_footer-links_div">
-        <h4>Links</h4>
-        <p>Overons</p>
-        <p>Social Media</p>
-        <p>Counters</p>
-        <p>Contact</p>
-      </div>
-      <div className="ws_footer-links_div">
-        <h4>Company</h4>
-        <p>Terms & Conditions </p>
-        <p>Privacy Policy</p>
-        <p>Contact</p>
-      </div>
-      <div className="ws_footer-links_div">
-        <h4>Get in touch</h4>
-        <p>701-2351 beta ave</p>
-        <p>778-723-7777</p>
-        <p>wanshengjianshe@gmail.com</p>
-      </div>
-    </div>
+    <Flex className='ws_footer-section'
+      gridColumn={['1 / 7', '1 / 7', '1 / 7', '3 / 4', '3 / 4']}
+      paddingX="8"
+      mt={['12', '12', '12', '0', '0']}
+    >
+      <Text as="h1">
+        Projects
+      </Text>
+      <Text mb="6px">WHMCS-bridge</Text>
+      <Text mb="6px">Search Domain</Text>
+      <Text mb="6px">My Account</Text>
+      <Text mb="6px">Shopping Cart</Text>
+      <Text>Our Shop</Text>
+    </Flex>
 
-    <div className="ws_footer-copyright">
-      <p>@2022 万盛建设. All rights reserved.</p>
-    </div>
-  </div>
+    <Flex className='ws_footer-section'
+      gridColumn={['1 / 7', '1 / 7', '1 / 7', '4 / 5', '4 / 5']}
+      paddingX={['8', '8', '8', '2', '2']}
+      mt={['12', '12', '12', '0', '0']}
+    >
+      <Text as="h1" >
+        Contact Us
+      </Text>
+      <Text mb="6px">Address: 6688 Peason Way</Text>
+      <Text mb="6px">Phone: +1 778-855-5154</Text>
+      <Text>Email: wanshengjianshe@gmail.com</Text>
+    </Flex>
+
+    <Flex className='ws_footer-section'
+      gridColumn={['1 / 7', '1 / 7', '1 / 7', '5 / 6', '5 / 6']}
+      paddingX={['8', '8', '8', '2', '2']}
+      mt={['12', '12', '12', '0', '0']}
+    >
+      <Text as="h1">
+        Newsletter
+      </Text>
+      <Text mb="6px">
+        Wansheng Construction is building magic here{' '}
+      </Text>
+    </Flex>
+</Grid>
+  
 );
 
 export default Footer;

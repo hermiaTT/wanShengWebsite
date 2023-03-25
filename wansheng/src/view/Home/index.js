@@ -1,7 +1,7 @@
 import React from 'react';
 import {Brand,Feature, Navbar,CTA} from '../../components';
 // import '../../App.css';
-import { Cases, Contanct, Header, Intro, Team } from '../../containers';
+import { Cases, Header, Intro, Team } from '../../containers';
 const Home = (props) => {
   return (
     <div className='App'>
@@ -12,7 +12,6 @@ const Home = (props) => {
         <Intro/>
         <Team/>
         <Cases/>
-        <Contanct/>
     </div>
   )
 }

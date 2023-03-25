@@ -4,6 +4,7 @@ import {zee,scott,momo,mario,serviceBG} from '../../assets/imports';
 import './team.css';
 import { Box, Grid, Image, Flex, Heading, Text } from '@chakra-ui/core';
 import Button from '../../components/field/Button';
+import Title from '../../components/field/Title';
 
 const teamData = [
   {
@@ -32,11 +33,7 @@ const Team = () => {
           width={['0%', '0%', '0%', '40%', '60%']}
           display={['none', 'none', 'none', 'block', 'block']}
         />
-        <Grid className='ws_team-service-container'
-          backgroundColor="orange.500"
-          templateColumns="repeat(12, 1fr)"
-          templateRows="repeat(3, 1fr)"
-        >
+        <Grid className='ws_team-service-container' >
           <Flex className='ws_team-service-flex' gridColumn={['2 / 12', '2 / 12', '2 /12', '7 / 13', '7 / 13']} >
             <Heading as="h3"> Our Professional Services</Heading>
             <Heading as="h4"> We Will Create Modern And First Class Intorior.</Heading>
@@ -57,11 +54,7 @@ const Team = () => {
       </Box>
       
       <Flex className="ws__team" mt={['24px', '24px', '24px', '134px', '64px']}>
-        <Heading className="ws__team-heading">
-          Creative Director
-        </Heading>
-        <Text className="ws__team-heading-text">The Future is Now and You Just Need to Realize It. Step into Future Today. & Make it Happen.</Text>
-
+        <Title title={"Creative Director"} description={"The Future is Now and You Just Need to Realize It. Step into Future Today. & Make it Happen."}/>
         <Grid className="ws__team-container"  >
           {teamData.map((item, index) => (
           <Box position="relative" gridColumn={['1 / 4', '1 / 4', 'auto', 'auto', 'auto']} >

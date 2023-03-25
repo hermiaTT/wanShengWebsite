@@ -1,10 +1,8 @@
 import React from 'react';
 import {Navbar} from './components';
 import {Footer} from './containers';
-import {
-  BrowserRouter as Router, useRoutes,
-} from "react-router-dom";
-
+import { BrowserRouter as Router, useRoutes,} from "react-router-dom";
+import { Divider } from '@chakra-ui/core';
 import './App.css';
 import ErrorBoundary from './ErrorBoundary';
 import Home from './view/Home';
@@ -28,6 +26,7 @@ const AppWrapper = (props) => {
             <App/>
           </Router>
         </ErrorBoundary>
+        <Divider mt="24px"/>
         <Footer/>
     </div>
     </React.Fragment>

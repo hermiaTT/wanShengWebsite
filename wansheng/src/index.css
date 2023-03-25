@@ -1,3 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+
+:root {
+  --font-family: 'Manrope', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  background-color: #fffaf1;
+  --color-subtext: #FF8A71;
+}
 .ws_button{
   padding: 0.5rem 1rem;
   /* color: #fff; */
@@ -10,4 +21,42 @@
   outline: none;
   cursor: pointer;
   border-radius: 5px;
+  align-self: auto !important;
+}
+.ws_heading-container{
+  display: contents;
+}
+.ws_heading {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 54px;
+}
+.ws_heading-text{
+  font-size: 16px;
+  margin-bottom: 32px;
+  max-width: 460px;
+  text-align: center;
+}
+
+.ws_footer{
+  grid-template-columns: repeat(6,1fr);
+  margin: 16px 0;
+}
+.ws_footer-section{
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ws_footer-section Box{
+  size: 22px;
+  color: #f39d00;
+  margin-right: 12px;
+}
+
+.ws_footer-section h1{
+  color: #f39d00;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
