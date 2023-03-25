@@ -6,10 +6,10 @@ import {Flex, Grid,Heading} from '@chakra-ui/react'
 const Header = () => {
   return (
     <Grid
-      backgroundImage= {header} className = "ws__header"
+      backgroundImage= {header} className = "ws__header wrapper"
       height={['60vh', '60vh', '60vh', '70vh']}
     >
-      <Flex className='ws__header-content'
+      <Flex className='ws__header-content wrapper'
         paddingX={['1.5em', '1.5em', '1.5em', '15%']}
       >
         <Heading  as="h1">

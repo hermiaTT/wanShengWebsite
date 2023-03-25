@@ -427,6 +427,7 @@
 .ws__header-content {
     grid-row: 3/3;
     flex-direction: column;
+    font-family: 'Roboto Mono', monospace;
 }
 
 
@@ -437,13 +438,16 @@
     line-height: 75px;
     letter-spacing: -0.04em;
     color: #ffffff;
+    text-shadow: 2px 2px #e17b1d;
 }
 .ws__header-content h3{
     text-transform: uppercase;
-    color: orange.500;
+    color: #e17b1d;
     background-color: white;
     width: fit-content;
     padding: 16px 8px;
+    border-radius: 4px;
+
 }
 .ws__intro {
   width: 100%;

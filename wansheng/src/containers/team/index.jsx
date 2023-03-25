@@ -28,15 +28,15 @@ const Team = () => {
     <div id="team">
       <Box position={"relative"}>
         <Image src ={serviceBG}
-          className='ws_team-bgImage' 
+          className='ws_team-bgImage wrapper '
           width={['0%', '0%', '0%', '40%', '60%']}
           display={['none', 'none', 'none', 'block', 'block']}
         />
         <Grid className='ws_team-service-container' >
           <Flex className='ws_team-service-flex' gridColumn={['2 / 12', '2 / 12', '2 /12', '7 / 13', '7 / 13']} >
-            <Heading as="h3"> Our Professional Services</Heading>
-            <Heading as="h4"> We Will Create Modern And First Class Intorior.</Heading>
-            <Text as ="p" >
+            <Heading className=' wrapper' as="h3"> Our Professional Services</Heading>
+            <Heading className=' wrapper' as="h4"> We Will Create Modern And First Class Intorior.</Heading>
+            <Text className=' wrapper' as ="p" >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy text
                 ever since the 1500s, when an unknown printer took a galley of type
@@ -53,12 +53,12 @@ const Team = () => {
       </Box>
       
       <Flex className="ws__team" mt={['24px', '24px', '24px', '134px', '64px']}>
-        <Title title={"Creative Director"} description={"The Future is Now and You Just Need to Realize It. Step into Future Today. & Make it Happen."}/>
+        <Title  title={"Creative Director"} description={"The Future is Now and You Just Need to Realize It. Step into Future Today. & Make it Happen."}/>
         <Grid className="ws__team-container"  >
           {teamData.map((item, index) => (
           <Box position="relative" gridColumn={['1 / 4', '1 / 4', 'auto', 'auto', 'auto']} >
-            <Image className='ws__team-container-img' src={item.img}/>
-            <Flex className='ws_team-card'>
+            <Image className='wrapper ws__team-container-img' src={item.img}/>
+            <Flex className='wrapper ws_team-card'>
               <Text fontWeight={"medium"} fontSize="22px">{item.name}</Text>
               <Text color={"orange"} >{item.title}</Text>
             </Flex>
