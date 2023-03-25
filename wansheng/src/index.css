@@ -134,12 +134,7 @@
 
 
 
-@media screen and (max-width: 550px) {
-  .ws_cases-container_article-content h3 {
-      font-size: 18px;
-      line-height: 25p;
-  }
-}
+
 .ws__features-container__feature {
   width: 100%;
   display: flex;
@@ -195,21 +190,6 @@
   color: var(--color-text);
 }
 
-@media screen and (max-width: 550px) {
-  .ws__features-container__feature-title h1 {
-      font-size: 14px;
-      line-height: 22px;
-  }
-
-  .ws__features-container_feature-text p {
-      font-size: 12px;
-      line-height: 20px;
-  }
-
-  .ws__features-container__feature {
-      margin: 1rem 0;
-  }
-}
 
 .ws__navbar {
   position: fixed;
@@ -308,39 +288,6 @@
   display: none;
 }
 
-@media screen and (max-width: 1050px) {
-  .ws__navbar-links_container {
-      display: none;
-  }
-
-  .ws__navbar-menu {
-      display: flex;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .ws__navbar {
-      padding: 2rem 4rem;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .ws__navbar {
-      padding: 2rem;
-  }
-
-  .ws__navbar-sign {
-      display: none;
-  }
-
-  .ws__navbar-menu_container {
-      top: 20px;
-  }
-
-  .ws__navbar-menu_container-links-sign {
-      display: block;
-  }
-}
 
 .ws_cases {
   flex-direction: column;
@@ -524,42 +471,6 @@
   text-align: left;
 }
 
-@media screen and (max-width: 850px) {
-  .ws__intro-heading {
-      flex-direction: column;
-      align-items: flex-start;
-      margin-bottom: 0rem;
-  }
-
-  .ws__intro-heading p {
-      margin-top: 1rem;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  /* Customizing feature component as per needs */
-  .ws__intro-feature .ws__features-container__feature {
-      flex-direction: column;
-  }
-
-  /* Customizing feature component as per needs */
-  .ws__intro-feature .ws__features-container_feature-text {
-      margin-top: 0.5rem;
-  }
-
-  .ws__intro-heading h1 {
-      font-size: 28px;
-      line-height: 40px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  /* Customizing feature component as per needs */
-  .ws__intro-container .ws__features-container__feature {
-      margin: 1rem 0;
-      min-width: 100%;
-  }
-}
 
 .ws__team{
   flex-direction: column;
@@ -577,6 +488,7 @@
   width: 376px;
   height: 420px;
 }
+
 .ws_team-card{
   position: absolute;
   bottom: -35px;
@@ -646,21 +558,110 @@
   text-align: left;
   line-height: 23px;
 }
-/* 
-@media screen and (max-width: 990px) {
-  .ws__team {
-      flex-direction: column;
-  }
 
-  .ws__team-heading {
-      margin: 0 0 2rem 0;
+@media screen and (max-width: 350px) {
+  /* Customizing feature component as per needs */
+  .ws__intro-container .ws__features-container__feature {
+      margin: 1rem 0;
+      min-width: 100%;
   }
 }
 
-
 @media screen and (max-width: 550px) {
-  .ws__team-heading h1 {
-      font-size: 28px;
-      line-height: 38px;
+  .ws__features-container__feature-title h1 {
+      font-size: 14px;
+      line-height: 22px;
   }
-} */
+
+  .ws__features-container_feature-text p {
+      font-size: 12px;
+      line-height: 20px;
+  }
+
+  .ws__features-container__feature {
+      margin: 1rem 0;
+  }
+
+  .ws_cases-container_article-content h3 {
+    font-size: 18px;
+    line-height: 25p;
+  }
+  .ws__navbar {
+    padding: 2rem;
+  }
+
+  .ws__navbar-sign {
+      display: none;
+  }
+
+  .ws__navbar-menu_container {
+      top: 20px;
+  }
+
+  .ws__navbar-menu_container-links-sign {
+      display: block;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  /* Customizing feature component as per needs */
+  .ws__intro-feature .ws__features-container__feature {
+      flex-direction: column;
+  }
+
+  /* Customizing feature component as per needs */
+  .ws__intro-feature .ws__features-container_feature-text {
+      margin-top: 0.5rem;
+  }
+
+  .ws__intro-heading h1 {
+      font-size: 28px;
+      line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ws__navbar {
+      padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .ws__intro-heading {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0rem;
+  }
+
+  .ws__intro-heading p {
+      margin-top: 1rem;
+  }
+  .ws_cases-container_article {
+    height: 486px;
+    overflow: hidden;
+  }
+  .ws_cases-container_article-content {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .ws__navbar-links_container {
+      display: none;
+  }
+
+  .ws__navbar-menu {
+      display: flex;
+  }
+  .ws__team-container-img {
+    height: 208px;
+  }
+
+
+}
+
+
+
+
+
