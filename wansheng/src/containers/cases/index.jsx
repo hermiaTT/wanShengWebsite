@@ -1,6 +1,5 @@
 import React from 'react'
-import './cases.css';
-import Article from '../../components/article/article';
+import Article from '../../components/article';
 import { case1, case1After} from '../../assets/imports';
 import { Flex, Grid, Heading, Text } from '@chakra-ui/react';
 import Title from '../../components/field/Title';

@@ -1,18 +1,17 @@
 import React, {useState} from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.svg';
-import './navbar.css';
 import { Flex} from '@chakra-ui/react'
 import Button from '../field/Button';
 //BEN -> Block Element Modifier
 
 const Menu = ()=>(
   <>
-    <p><a href='#home'>主页/Home</a></p>
-    <p><a href='#intro'>关于我们/About Us</a></p>
-    <p><a href='#team'>专业团队/Team</a></p>
-    <p><a href='#cases'>案列/Cases</a></p>
-    <p><a href='#contact'>联系我们/Contanct</a></p>
+    <p><a href='#home'>Home</a></p>
+    <p><a href='#intro'>About Us</a></p>
+    <p><a href='#team'>Team</a></p>
+    <p><a href='#cases'>Cases</a></p>
+    <p><a href='#contact'>Contanct</a></p>
   </>
 )
 

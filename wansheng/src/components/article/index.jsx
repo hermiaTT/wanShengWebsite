@@ -1,5 +1,4 @@
 import React from 'react';
-import './article.css';
 const Article = ({ imgBefore, imgAfter, date, text }) => {
   return (
     <div className="ws_cases-container_article">

@@ -1,17 +1,19 @@
 import React from 'react';
-import {Brand,Feature, Navbar,CTA} from '../../components';
+import Cases from '../../containers/cases';
+import Intro from '../../containers/intro';
+import Team from '../../containers/team';
+import Headers from '../../containers/header';
 // import '../../App.css';
-import { Cases, Header, Intro, Team } from '../../containers';
 const Home = (props) => {
   return (
     <div className='App'>
         <div className='gradient__bg'>
-          <Header />
+          <Headers />
         </div>
         {/* <Brand/> */}
-        <Intro/>
-        <Team/>
-        <Cases/>
+        <Intro />
+        <Team />
+        <Cases />
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import {Navbar} from './components';
-import {Footer} from './containers';
 import { BrowserRouter as Router, useRoutes,} from "react-router-dom";
-import { Divider } from '@chakra-ui/core';
-import './App.css';
+import { Divider } from '@chakra-ui/react';
+// import './App.css';
 import ErrorBoundary from './ErrorBoundary';
 import Home from './view/Home';
+import Navbar from './components/navbar';
+import Footer from './containers/footer';
 
 const App = ()=>{
   let routes = useRoutes([
@@ -19,7 +19,7 @@ const AppWrapper = (props) => {
     <React.Fragment>
     <div className='App'>
         <div className='gradient__bg'>
-          <Navbar/>
+          <Navbar/ >
         </div>
         <ErrorBoundary>
           <Router>
@@ -27,7 +27,7 @@ const AppWrapper = (props) => {
           </Router>
         </ErrorBoundary>
         <Divider mt="24px"/>
-        <Footer/>
+        <Footer />
     </div>
     </React.Fragment>
   )

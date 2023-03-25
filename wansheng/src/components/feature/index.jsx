@@ -1,6 +1,5 @@
 import React from 'react';
-import './feature.css';
-import { Image } from '@chakra-ui/core';
+import { Image } from '@chakra-ui/react';
 
 const Feature = ({ title, text, img = "",hidden=false }) => (
   <div className="ws__features-container__feature">

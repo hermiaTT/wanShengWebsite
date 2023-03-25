@@ -1,8 +1,7 @@
 import React from 'react'
-import Feature from '../../components/feature/feature';
+import Feature from '../../components/feature/index.jsx';
 import {zee,scott,momo,mario,serviceBG} from '../../assets/imports';
-import './team.css';
-import { Box, Grid, Image, Flex, Heading, Text } from '@chakra-ui/core';
+import { Box, Grid, Image, Flex, Heading, Text } from '@chakra-ui/react';
 import Button from '../../components/field/Button';
 import Title from '../../components/field/Title';
 

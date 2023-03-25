@@ -1,9 +1,8 @@
 import React from 'react';
-import Feature from '../../components/feature/feature';
+import Feature from '../../components/feature/index.jsx';
 import {Box, Flex, Grid, Heading, Text, Image } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import {rocket, power, stack, aboutUsBG} from '../../assets/imports';
-import './intro.css'
 import Button from '../../components/field/Button';
 const Intro = () => {
   const {t, i18n } = useTranslation();

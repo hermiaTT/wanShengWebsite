@@ -2,7 +2,6 @@ import React from 'react';
 import header from '../../assets/header-bg.png';
 import {Flex, Grid,Heading} from '@chakra-ui/react'
 
-import './header.css';
 //可以改成想要的样式
 const Header = () => {
   return (
