@@ -47,7 +47,7 @@ const Team = () => {
                 and more recently with desktop publishing software like Aldus
                 PageMaker including versions of Lorem Ipsum.
             </Text>
-            <Button title={'Try Now'} variant ={1}></Button>
+            <Button title={'Try Now'} variant ={1} onClick={()=>{console.log("pushing....");}}></Button>
           </Flex>
         </Grid> 
       </Box>

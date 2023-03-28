@@ -1,21 +1,17 @@
 import {React} from 'react';
 import { useRef, useEffect } from "react";
-import { BrowserRouter as Router, useRoutes,} from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import { Divider } from '@chakra-ui/react';
 // import './App.css';
 import ErrorBoundary from './ErrorBoundary';
 import Home from './view/Home';
+import AI from './view/AI';
 import Navbar from './components/navbar';
 import Footer from './containers/footer';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-const App = ()=>{
-  let routes = useRoutes([
-    { path: "/", element: <Home /> },
-  ]);
-  return routes;
-}
+
 const animateFrom = (elem,x,y) => {
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";
@@ -32,6 +28,7 @@ const animateFrom = (elem,x,y) => {
 const hide=(elem)=> {
   gsap.set(elem, {autoAlpha: 0});
 }
+
 const AppWrapper = (props) => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
@@ -46,26 +43,9 @@ const AppWrapper = (props) => {
           onEnter: function() { animateFrom(elem,x,y) }, 
           onEnterBack: function() { animateFrom(elem, x,y) },
           onLeave: function() { hide(elem) } // assure that the element is hidden when scrolled into view
-        });
-      
+        });  
     });
-    // gsap.fromTo(
-    //   element.querySelector(".gs_reveal_fromLeft"),
-    //   {
-    //     opacity: 0,
-    //     y: -20
-    //   },
-    //   {
-    //     opacity: 1,
-    //     y: 0,
-    //     scrollTrigger: {
-    //       trigger: element.querySelector(".gs_reveal_fromLeft"),
-    //       start: "top top",
-    //       end: "bottom center",
-    //       scrub: true
-    //     }
-    //   }
-    // );
+
   }, []);
   return (
     // <React.Fragment>
@@ -74,9 +54,10 @@ const AppWrapper = (props) => {
           <Navbar/ >
         </div>
         <ErrorBoundary>
-          <Router>
-            <App/>
-          </Router>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/ai' element={<AI/>}/>
+          </Routes>
         </ErrorBoundary>
         <Divider mt="24px"/>
         <Footer />
