@@ -1,10 +1,18 @@
 import {createBrowserHistory} from 'history';
+import createSagaMiddleware from '@redux-saga/core';
+import {createStore,applyMiddleware} from 'redux';
+import reducers from './reducers';
+import sagas from './sagas';
+//create middleware
+const sagaMiddleware = createSagaMiddleware();
+
 export const history = createBrowserHistory();
+export const store = createStore(
+    reducers, applyMiddleware(sagaMiddleware)
+    )
+sagaMiddleware.run(sagas);
 
-history.listen((location,action)=>{
-    window.scrollTo(0,0);
-})
 
-// export const historyStart = ()=> history.location.state && history.location.state.key === "start";
 
-history.replace({state:{key:"start"}});
+ 
+ 

@@ -1,11 +1,11 @@
 import React from 'react';
 import Feature from '../../components/feature/index.jsx';
 import {Box, Flex, Grid, Heading, Text, Image } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import {rocket, power, stack, aboutUsBG} from '../../assets/imports';
 import Button from '../../components/field/Button';
 const Intro = () => {
-  const {t, i18n } = useTranslation();
+  // const {t, i18n } = useTranslation();
   return (
     <div  id="intro">
       <Flex className='ws__intro section__margin'>

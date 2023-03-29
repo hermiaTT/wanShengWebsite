@@ -604,6 +604,38 @@
 
 }
 
+.ws_openAI{
+  width: 100%;
+  flex-direction: row;
+  /* align-items: center; */
+  padding-top: 88px;
+  justify-content: space-between;
+  margin-top: 24px;
+  display: contents;
+}
+.ws_openAI-question-container{
+  width: auto;
+}
+.ws_openAI-img-container{
+  width: 50%;
+}
+.ws_openAI-img-container img{
+  width: 100%;
+  height: 100%;
+}
+.ws_tab{
+  padding:8px;
+}
+.ws_tab .chakra-tabs__tab {
+  padding: 0.5rem 1rem;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 2px;
+}
 @media screen and (max-width: 650px) {
   /* Customizing feature component as per needs */
   .ws__intro-feature .ws__features-container__feature {

@@ -3,8 +3,8 @@ const Article = ({ imgBefore, imgAfter, date, text }) => {
   return (
     <div className="ws_cases-container_article">
       <div className="ws_cases-container_article-image">
-        <img src={imgBefore} className="image-before" />
-        <img src={imgAfter} className="image-after" />
+        <img src={imgBefore} className="image-before" alt='' />
+        <img src={imgAfter} className="image-after"  alt=''/>
       </div>
       <div className="ws_cases-container_article-content">
         <div>

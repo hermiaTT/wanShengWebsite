@@ -1,7 +1,7 @@
 import React from 'react'
 import Article from '../../components/article';
 import { case1, case1After} from '../../assets/imports';
-import { Flex, Grid, Heading, Text } from '@chakra-ui/react';
+import { Flex, Grid } from '@chakra-ui/react';
 import Title from '../../components/field/Title';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 

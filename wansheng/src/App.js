@@ -30,10 +30,12 @@ const hide=(elem)=> {
 }
 
 const AppWrapper = (props) => {
+
+
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
   useEffect(() => {
-    const element = ref.current;
+    // const element = ref.current;
     gsap.utils.toArray(".wrapper").forEach((elem, index) => {
 
         hide(elem);

@@ -1,4 +1,4 @@
-import React, {Component, components} from "react";
+import React, {Component} from "react";
 import {withTranslation} from "react-i18next";
 class ErrorBoudary extends Component{
     constructor(props){
