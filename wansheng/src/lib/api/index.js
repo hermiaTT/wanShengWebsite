@@ -4,10 +4,10 @@ const configuration = new Configuration({
   });
 const openai = new OpenAIApi(configuration);
 
-export const getOpenAIResponse =(prompt)=>{
-    let response = openai.createImage({
+export const getOpenAIResponse = async (prompt)=>{
+    let response = await openai.createImage({
         prompt: prompt,
-        n: 1,
+        n: 4,
         size: "1024x1024",
       });
     return response;

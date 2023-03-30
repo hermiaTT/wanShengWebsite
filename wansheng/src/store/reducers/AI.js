@@ -4,7 +4,7 @@ const initialState ={
     customInput: INTERIOR_DESIGN_PATTERN,
     customImg: "",
     customDescription: "",
-    aiImg: scott
+    aiImgs: []
 };
 
 const reducer =(state = initialState, action)=>{
@@ -19,10 +19,10 @@ const reducer =(state = initialState, action)=>{
             return state;
         case "GET_AI":
             return state;
-        case "UPDATE_DES":
+        case "SUBMIT_DES":
             return {...state, customDescription: action.value}
         case "SET_AIIMG":
-            return {...state, aiImg: action.aiImg}
+            return {...state, aiImgs: action.aiImgs}
         default:
             return state;
     }

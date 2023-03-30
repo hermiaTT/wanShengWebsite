@@ -8,8 +8,7 @@ const AI = () => {
 
   const dispatch = useDispatch();
   const state = useSelector((state)=>state.AI);
-  const [prompt, setPrompt] = useState("");
-  const aiImg =state.aiImg;
+  const aiImgs =state.aiImgs;
   const [loading, setLoading] = useState(false);
   console.log(state);
 
@@ -44,7 +43,7 @@ const AI = () => {
   const handleSubmit = (e)=>{
     e.preventDefault();
     setLoading(true);
-    dispatch({type:"UPDATE_DES", value:prompt});
+    dispatch({type:"SUBMIT_DES", value:state.customInput});
     setLoading(false);
   }
   return (
@@ -58,15 +57,11 @@ const AI = () => {
         <TabPanels>
           <TabPanel>
             <form onSubmit={handleSubmit}>
-            <textarea
-              type="text"
-              value={prompt}
-              style={{color:"black"}}
-              placeholder="Please ask to openai"
-              onChange={(e) => setPrompt(e.target.value)}
-            ></textarea>
+            {state.customInput.map((item,key)=>(
+              <InputWS title={item.id} placeholder={item.label} onChange={(e)=>updateInput(item.id, e.target.value)}/>
+            ))}
             <button
-              disabled={loading || prompt.length === 0}
+              // disabled={loading || prompt.length === 0}
               type="submit"
             >
               {loading ? "Generating..." : "Generate"}
@@ -75,17 +70,17 @@ const AI = () => {
           </TabPanel>
           <TabPanel>
             <div>input</div>
-            {state.customInput.map((item,key)=>(
-              <InputWS title={item.id} placeholder={item.label} onChange={(e)=>updateInput(item.id, e.target.value)}/>
-            ))}
+
           </TabPanel>
         </TabPanels>
       </Tabs>
 
       </div>
-      {aiImg && (
+      {aiImgs && (
         <div className="ws_openAI-img-container">
-            <img src={aiImg} alt="aiImg"/>
+          {aiImgs.map((aiImg,key)=>(
+            <img src={aiImg.url} alt={key}/>
+          ))}
         </div>
       )}
     </Flex>

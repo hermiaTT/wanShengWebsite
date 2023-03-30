@@ -2,11 +2,18 @@ import {select, put, takeLatest} from 'redux-saga/effects'
 import { getOpenAIResponse } from '../../lib/api';
 
 function*  getAIimg (action) {
+  let prompt ="A virtual interior design with following requirement: ";
+  action.value.forEach((element,id) => {
+    if(element.value){
+      let curSentence = `${id+1}: ${element.id} is ${element.value} `;
+      prompt += curSentence;
+    }
+  });
     try {
-      const response = yield getOpenAIResponse(action.value)
+      const response = yield getOpenAIResponse(prompt)
       yield put({
         type: "SET_AIIMG",
-        aiImg: response.data.data[0].url
+        aiImgs: response.data.data
       })  
 
     } catch (e) {
@@ -16,5 +23,5 @@ function*  getAIimg (action) {
 }
 
 export default function* AIWatcher(){
-    yield takeLatest('UPDATE_DES',getAIimg)
+    yield takeLatest('SUBMIT_DES',getAIimg)
 }
